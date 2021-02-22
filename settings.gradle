@@ -8,3 +8,6 @@ git {
     }
 }
 rootProject.name = 'java-instrumentation-template'
+include 'hivemq-mqtt-client-1.0'
+include 'hivemq-mqtt-client-1.1'
+include 'hivemq-mqtt-client-1.2'
