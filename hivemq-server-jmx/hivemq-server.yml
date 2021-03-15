@@ -1,0 +1,441 @@
+name: HiveMQ-Server
+version: 1.0
+enabled: true
+jmx:
+  - object_name: metrics:name=com.hivemq.cache.payload-persistence.averageLoadPenalty
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.cache.payload-persistence.evictionCount
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.cache.payload-persistence.hitCount
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.cache.payload-persistence.hitRate
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.cache.payload-persistence.loadCount
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.cache.payload-persistence.loadExceptionCount
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.cache.payload-persistence.loadExceptionRate
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.cache.payload-persistence.loadSuccessCount
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.cache.payload-persistence.missCount
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.cache.payload-persistence.missRate
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.cache.payload-persistence.requestCount
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.cache.payload-persistence.totalLoadTime
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.cache.shared-subscription.averageLoadPenalty
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.cache.shared-subscription.evictionCount
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.cache.shared-subscription.hitCount
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.cache.shared-subscription.hitRate
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.cache.shared-subscription.loadCount
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.cache.shared-subscription.loadExceptionCount
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.cache.shared-subscription.loadExceptionRate
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.cache.shared-subscription.loadSuccessCount
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.cache.shared-subscription.missCount
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.cache.shared-subscription.missRate
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.cache.shared-subscription.requestCount
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.cache.shared-subscription.totalLoadTime
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.client-events.stored.total
+    metrics:
+      - attributes: Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.cluster.name-request.retry.count
+    metrics:
+      - attributes: Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.cluster.nodes.count
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.cluster.topology-change.time
+    metrics:
+      - attributes: Max, Min, Mean, 75thPercentile, 95thPercentile, 98thPercentile, 99thPercentile, 999thPercentile, StdDev, 50thPercentile, Count, FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate
+        type: simple
+  - object_name: metrics:name=com.hivemq.exceptions.total
+    metrics:
+      - attributes: FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate, Count
+        type: simple
+  - object_name: metrics:name=ccom.hivemq.keep-alive.disconnect.count
+    metrics:
+      - attributes: Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.logging.*
+    metrics:
+      - attributes: FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.messages.dropped.count
+    metrics:
+      - attributes: Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.messages.dropped.rate
+    metrics:
+      - attributes: FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.messages.dropped.*.count
+    metrics:
+      - attributes: Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.messages.expired.cache-size
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.messages.expired.*.count
+    metrics:
+      - attributes: Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.messages.incoming.*.count
+    metrics:
+      - attributes: Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.messages.incoming.*.rate
+    metrics:
+      - attributes: FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.messages.incoming.*.bytes
+    metrics:
+      - attributes: Max, Min, Mean, 75thPercentile, 95thPercentile, 98thPercentile, 99thPercentile, 999thPercentile, StdDev, 50thPercentile, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.messages.outgoing.*.count
+    metrics:
+      - attributes: Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.messages.outgoing.*.rate
+    metrics:
+      - attributes: FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.messages.outgoing.*.bytes
+    metrics:
+      - attributes: Max, Min, Mean, 75thPercentile, 95thPercentile, 98thPercentile, 99thPercentile, 999thPercentile, StdDev, 50thPercentile, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.messages.queued.count
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.messages.pending.*.count
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.messages.retained.*.count
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.messages.*-resent
+    metrics:
+      - attributes: FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.messages.retained.current
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.messages.retained.mean
+    metrics:
+      - attributes: Max, Min, Mean, 75thPercentile, 95thPercentile, 98thPercentile, 99thPercentile, 999thPercentile, StdDev, 50thPercentile, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.messages.retained.rate
+    metrics:
+      - attributes: FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.messages.expired-messages
+    metrics:
+      - attributes: Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.messages.client.*.count
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.messages.shared.*.count
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.networking.bytes.*
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.networking.connections.current
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.networking.connections.mean
+    metrics:
+      - attributes: Max, Min, Mean, 75thPercentile, 95thPercentile, 98thPercentile, 99thPercentile, 999thPercentile, StdDev, 50thPercentile, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.networking.connections-closed.*.count
+    metrics:
+      - attributes: Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.payload-persistence.cleanup-executor.completed
+    metrics:
+      - attributes: FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.payload-persistence.cleanup-executor.duration
+    metrics:
+      - attributes: Max, Min, Mean, 75thPercentile, 95thPercentile, 98thPercentile, 99thPercentile, 999thPercentile, StdDev, 50thPercentile, Count, FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate
+        type: simple
+  - object_name: metrics:name=com.hivemq.payload-persistence.cleanup-executor.running
+    metrics:
+      - attributes: Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.payload-persistence.cleanup-executor.scheduled.once
+    metrics:
+      - attributes: FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.payload-persistence.cleanup-executor.scheduled.overrun
+    metrics:
+      - attributes: Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.payload-persistence.cleanup-executor.scheduled.percent-of-period
+    metrics:
+      - attributes: Max, Min, Mean, 75thPercentile, 95thPercentile, 98thPercentile, 99thPercentile, 999thPercentile, StdDev, 50thPercentile, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.payload-persistence.cleanup-executor.scheduled.repetitively
+    metrics:
+      - attributes: FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.payload-persistence.cleanup-executor.submitted
+    metrics:
+      - attributes: FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.persistence-executor.completed
+    metrics:
+      - attributes: FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.persistence-executor.duration
+    metrics:
+      - attributes: FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.persistence-executor.running
+    metrics:
+      - attributes: Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.persistence-executor.submitted
+    metrics:
+      - attributes: FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.persistence-scheduled-executor.completed
+    metrics:
+      - attributes: FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.persistence-scheduled-executor.duration
+    metrics:
+      - attributes: FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.persistence-scheduled-executor.running
+    metrics:
+      - attributes: Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.persistence-scheduled-executor.scheduled.once
+    metrics:
+      - attributes: FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.persistence-scheduled-executor.scheduled.overrun
+    metrics:
+      - attributes: Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.persistence-scheduled-executor.scheduled.percent-of-period
+    metrics:
+      - attributes: Max, Min, Mean, 75thPercentile, 95thPercentile, 98thPercentile, 99thPercentile, 999thPercentile, StdDev, 50thPercentile, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.persistence-scheduled-executor.scheduled.repetitively
+    metrics:
+      - attributes: FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.persistence-scheduled-executor.submitted
+    metrics:
+      - attributes: FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.persistence.executor.client-*.tasks
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.persistence.executor.client-events.time
+    metrics:
+      - attributes: FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.persistence.executor.noempty-queues
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.persistence.executor.*.tasks
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.persistence.executor.*.time
+    metrics:
+      - attributes: FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.persistence.executor.queue-misses
+    metrics:
+      - attributes: Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.persistence.executor.running.threads
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.persistence.payload-entries.count
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.persistence.removable-entries.count
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.sessions.overall.current
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.sessions.persistent.active
+    metrics:
+      - attributes: Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.single-writer-executor.completed
+    metrics:
+      - attributes: FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.single-writer-executor.duration
+    metrics:
+      - attributes: Max, Min, Mean, 75thPercentile, 95thPercentile, 98thPercentile, 99thPercentile, 999thPercentile, StdDev, 50thPercentile, Count, FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate
+        type: simple
+  - object_name: metrics:name=com.hivemq.single-writer-executor.running
+    metrics:
+      - attributes: Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.single-writer-executor.submitted
+    metrics:
+      - attributes: FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.subscriptions.overall.current
+    metrics:
+      - attributes: Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.extension.managed-executor.submitted
+    metrics:
+      - attributes: FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.extension.managed-executor.running
+    metrics:
+      - attributes: Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.extension.managed-executor.completed
+    metrics:
+      - attributes: FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.extension.managed-executor.duration
+    metrics:
+      - attributes: Max, Min, Mean, 75thPercentile, 95thPercentile, 98thPercentile, 99thPercentile, 999thPercentile, StdDev, 50thPercentile, Count, FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate
+        type: simple
+  - object_name: metrics:name=com.hivemq.extension.managed-executor.scheduled.once
+    metrics:
+      - attributes: FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.extension.managed-executor.scheduled.repetitively
+    metrics:
+      - attributes: FifteenMinuteRate, FiveMinuteRate, MeanRate, OneMinuteRate, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.extension.managed-executor.scheduled.overrun
+    metrics:
+      - attributes: Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.extension.managed-executor.scheduled.percent-of-period
+    metrics:
+      - attributes: Max, Min, Mean, 75thPercentile, 95thPercentile, 98thPercentile, 99thPercentile, 999thPercentile, StdDev, 50thPercentile, Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.extension.services.rate-limit-exceeded.count
+    metrics:
+      - attributes: Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.extension.services.publish-service-publishes
+    metrics:
+      - attributes: Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.extension.services.publish-service-publishes-to-client
+    metrics:
+      - attributes: Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.qos-0-memory.*
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.cpu-cores.*
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.publish.without-matching-subscribers
+    metrics:
+      - attributes: Count
+        type: simple
+  - object_name: metrics:name=com.hivemq.topic-alias.memory.usage
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.topic-alias.count.total
+    metrics:
+      - attributes: Value
+        type: simple
+  - object_name: metrics:name=com.hivemq.overload-protection.*
+    metrics:
+      - attributes: Value
+        type: simple
+
