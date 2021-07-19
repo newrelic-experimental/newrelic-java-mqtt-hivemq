@@ -1,13 +1,18 @@
 [![New Relic Experimental header](https://github.com/newrelic/opensource-website/raw/master/src/images/categories/Experimental.png)](https://opensource.newrelic.com/oss-category/#new-relic-experimental)
 
-# [Project Name - use format "newrelic-java-<name>"] [build badges go here when available]
 
->[Brief description - what is the project and value does it provide? How often should users expect to get releases? How is versioning set up? Where does this project want to go?]
+# New Relic Java instrumentation for HiveMQ
+
+Provides instrumentation for publish and subscribe methods to Hive MQ.   The instrumentation will provide these as Messages in the New Relic UI.
 
 ## Installation
-
-> [Include a step-by-step procedure on how to get your code installed. Be sure to include any third-party dependencies that need to be installed separately]
-
+  
+To install:   
+1. Download the latest release jar files.    
+2. In the New Relic Java directory (the one containing newrelic.jar), create a directory named extensions if it does not already exist.   
+3. Copy the downloaded jars into the extensions directory.   
+4. Restart the application.   
+   
 ## Getting Started
 
 >[Simple steps to start working with the software similar to a "Hello World"]
