@@ -3,7 +3,6 @@ package com.nr.instrumentation.hivemq.client;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
 
 import com.hivemq.client.internal.mqtt.datatypes.MqttTopicImpl;
 import com.hivemq.client.internal.mqtt.datatypes.MqttUserPropertiesImpl;
@@ -46,17 +45,13 @@ public class PublisherAdapter implements Function<Mqtt5Publish, Mqtt5Publish> {
 			token.linkAndExpire();
 			token = null;
 		}
-		NewRelic.getAgent().getLogger().log(Level.FINE, "Entering PublisherAdapter");
 		Mqtt5UserProperties userProperties = source.getUserProperties();
-		NewRelic.getAgent().getLogger().log(Level.FINE, "PublisherAdapter, initial userProps: {0}",userProperties);
 		
 		MqttUserPropertiesImpl userPropertiesNew = convertProperties(userProperties);
-		NewRelic.getAgent().getLogger().log(Level.FINE, "PublisherAdapter, converted userProps: {0}",userPropertiesNew);
 		
 		OutboundWrapper wrapper = new OutboundWrapper(userPropertiesNew);
 		NewRelic.getAgent().getTracedMethod().addOutboundRequestHeaders(wrapper);
 		userPropertiesNew = wrapper.getCurrent();
-		NewRelic.getAgent().getLogger().log(Level.FINE, "PublisherAdapter, populated userProps: {0}",userPropertiesNew);
 		
 		MqttTopic topic = source.getTopic();
 		
