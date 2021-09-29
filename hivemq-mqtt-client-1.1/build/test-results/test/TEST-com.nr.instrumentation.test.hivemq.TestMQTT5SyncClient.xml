@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nr.instrumentation.test.hivemq.TestMQTT5SyncClient" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-28T14:28:07" hostname="C02CL1QNMD6M" time="0.509">
+  <properties/>
+  <testcase name="doSyncPubSubTest" classname="com.nr.instrumentation.test.hivemq.TestMQTT5SyncClient" time="0.509"/>
+  <system-out><![CDATA[2021-07-28T09:28:02,953-0500 [45783 13] com.newrelic INFO: Using default collector host: collector.newrelic.com
+2021-07-28T09:28:02,960-0500 [45783 13] com.newrelic INFO: Using default collector host: collector.newrelic.com
+2021-07-28T09:28:02,962-0500 [45783 13] com.newrelic INFO: Using default collector host: collector.newrelic.com
+2021-07-28T09:28:03,030-0500 [45783 13] com.newrelic INFO: Using default collector host: collector.newrelic.com
+2021-07-28T09:28:03,034-0500 [45783 13] com.newrelic INFO: Using default collector host: collector.newrelic.com
+2021-07-28T09:28:03,035-0500 [45783 13] com.newrelic INFO: Using default collector host: collector.newrelic.com
+2021-07-28 09:28:03,127 INFO  - Setting default authentication behavior to ALLOW ALL
+2021-07-28 09:28:03,132 INFO  - HiveMQ version: Development Snapshot
+2021-07-28 09:28:03,182 INFO  - Starting EmbeddedHiveMQ.
+2021-07-28 09:28:07,114 INFO  - Starting HiveMQ extension system.
+2021-07-28 09:28:07,148 INFO  - Starting TCP listener on address 0.0.0.0 and port 1883
+2021-07-28 09:28:07,193 INFO  - Started TCP Listener on address 0.0.0.0 and on port 1883
+2021-07-28 09:28:07,194 INFO  - Started EmbeddedHiveMQ in 4011ms
+Call to subscribe
+Call to publish(0)
+Sub Connected: MqttConnAck{reasonCode=SUCCESS, sessionPresent=false, restrictions=MqttConnAckRestrictions{receiveMaximum=10, maximumPacketSize=268435460, topicAliasMaximum=5, maximumQos=EXACTLY_ONCE, retainAvailable=true, wildcardSubscriptionAvailable=true, sharedSubscriptionAvailable=true, subscriptionIdentifiersAvailable=true}}
+Subscribe Ack: MqttSubAck{reasonCodes=[GRANTED_QOS_2], packetIdentifier=65526}
+2021-07-28T09:28:07,588-0500 [45783 368] com.newrelic INFO: Set outbound headers to: [(MessageCount, 0), (NewRelicID, UhkfH1BSVkZVHRgeUVZWVQ==)]
+2021-07-28T09:28:07,588-0500 [45783 368] com.newrelic INFO: Set outbound headers to: [(MessageCount, 0), (NewRelicID, UhkfH1BSVkZVHRgeUVZWVQ==), (NewRelicTransaction, OENXBFIDUQFdU1ICVVADVw0PFRlVUVURBE5HUgBWBwIGXFNVAlJUAlJUX0dOQ1JcBVZSXANQRzs=)]
+Message from topic newrelic/test-sync
+first message received: 0
+message user properties: [(MessageCount, 0), (NewRelicID, UhkfH1BSVkZVHRgeUVZWVQ==), (NewRelicTransaction, OENXBFIDUQFdU1ICVVADVw0PFRlVUVURBE5HUgBWBwIGXFNVAlJUAlJUX0dOQ1JcBVZSXANQRzs=)]
+Sub Finished: true
+Pub Finished: true
+Finished transaction count: 2
+	Metric Name: Java/com.hivemq.client.internal.mqtt.handler.publish.incoming.MqttGlobalIncomingPublishFlow/request
+	Metric Name: Java/com.nr.instrumentation.test.hivemq.TestMQTT5SyncClient/subscribe
+	Metric Name: Custom/com.nr.instrumentation.test.hivemq.TestMQTT5SyncClient/processIncoming
+	Metric Name: MessageBroker/HiveMQ/Topic/Consume/Named/newrelic_test-sync
+	Metric Name: Java/com.nr.instrumentation.test.hivemq.TestMQTT5SyncClient/publish
+	Metric Name: MessageBroker/HiveMQ/Topic/Produce/Named/newrelic_test-sync
+2021-07-28 09:28:07,704 INFO  - Stopping EmbeddedHiveMQ.
+2021-07-28 09:28:09,759 INFO  - Shutting down extension system
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

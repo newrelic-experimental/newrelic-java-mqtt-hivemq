@@ -24,16 +24,16 @@ public class MqttAckFlowable {
 
 	@Trace(async=true)
 	protected void subscribeActual(Subscriber<? super Mqtt5PublishResult> subscriber) {
-		Token t = NewRelic.getAgent().getTransaction().getToken();
-		Token token = null;
-		if(t != null && t.isActive()) {
-			token = t;
-		} else if(t != null) {
-			t.expire();
-			t = null;
-		}
-		SubscriberWrapper wrapper = new SubscriberWrapper(subscriber, token);
-		subscriber = wrapper;
+//		Token t = NewRelic.getAgent().getTransaction().getToken();
+//		Token token = null;
+//		if(t != null && t.isActive()) {
+//			token = t;
+//		} else if(t != null) {
+//			t.expire();
+//			t = null;
+//		}
+//		SubscriberWrapper wrapper = new SubscriberWrapper(subscriber, token);
+//		subscriber = wrapper;
 		Weaver.callOriginal();
 
 	}

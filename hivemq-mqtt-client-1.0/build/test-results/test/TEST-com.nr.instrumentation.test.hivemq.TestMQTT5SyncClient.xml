@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nr.instrumentation.test.hivemq.TestMQTT5SyncClient" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-22T14:13:06" hostname="C02CL1QNMD6M" time="0.467">
+  <properties/>
+  <testcase name="doSyncPubSubTest" classname="com.nr.instrumentation.test.hivemq.TestMQTT5SyncClient" time="0.467"/>
+  <system-out><![CDATA[2021-07-22T09:13:02,543-0500 [837 13] com.newrelic INFO: Using default collector host: collector.newrelic.com
+2021-07-22T09:13:02,550-0500 [837 13] com.newrelic INFO: Using default collector host: collector.newrelic.com
+2021-07-22T09:13:02,552-0500 [837 13] com.newrelic INFO: Using default collector host: collector.newrelic.com
+2021-07-22T09:13:02,622-0500 [837 13] com.newrelic INFO: Using default collector host: collector.newrelic.com
+2021-07-22T09:13:02,626-0500 [837 13] com.newrelic INFO: Using default collector host: collector.newrelic.com
+2021-07-22T09:13:02,627-0500 [837 13] com.newrelic INFO: Using default collector host: collector.newrelic.com
+2021-07-22 09:13:02,720 INFO  - Setting default authentication behavior to ALLOW ALL
+2021-07-22 09:13:02,725 INFO  - HiveMQ version: Development Snapshot
+2021-07-22 09:13:02,777 INFO  - Starting EmbeddedHiveMQ.
+2021-07-22 09:13:06,868 INFO  - Starting HiveMQ extension system.
+2021-07-22 09:13:06,896 INFO  - Starting TCP listener on address 0.0.0.0 and port 1883
+2021-07-22 09:13:06,936 INFO  - Started TCP Listener on address 0.0.0.0 and on port 1883
+2021-07-22 09:13:06,936 INFO  - Started EmbeddedHiveMQ in 4159ms
+Call to subscribe, count = 0
+Call to publish(0)
+2021-07-22T09:13:07,265-0500 [837 400] com.newrelic INFO: Set outbound headers to: [(MessageCount, 0), (NewRelicID, UhkfH1BSVkZVHRgeUVZWVQ==)]
+2021-07-22T09:13:07,265-0500 [837 400] com.newrelic INFO: Set outbound headers to: [(MessageCount, 0), (NewRelicID, UhkfH1BSVkZVHRgeUVZWVQ==), (NewRelicTransaction, OENUVFsFAwNSUgRXUlMDVVlVFRlVUVURBE5HUVBfAVAEU1IDV1VXAlAABUdOQ1JcBVZSXANQRzs=)]
+Message from topic newrelic/test-sync
+first message received: 0
+message user properties: [(MessageCount, 0), (NewRelicID, UhkfH1BSVkZVHRgeUVZWVQ==), (NewRelicTransaction, OENUVFsFAwNSUgRXUlMDVVlVFRlVUVURBE5HUVBfAVAEU1IDV1VXAlAABUdOQ1JcBVZSXANQRzs=)]
+Sub Finished: true
+Pub Finished: true
+Finished transaction count: 2
+2021-07-22 09:13:07,404 INFO  - Stopping EmbeddedHiveMQ.
+2021-07-22 09:13:09,473 INFO  - Shutting down extension system
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

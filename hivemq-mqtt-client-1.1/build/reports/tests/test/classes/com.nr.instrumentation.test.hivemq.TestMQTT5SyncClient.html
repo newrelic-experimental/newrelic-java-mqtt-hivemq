@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class com.nr.instrumentation.test.hivemq.TestMQTT5SyncClient</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class com.nr.instrumentation.test.hivemq.TestMQTT5SyncClient</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.nr.instrumentation.test.hivemq.html">com.nr.instrumentation.test.hivemq</a> &gt; TestMQTT5SyncClient</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.509s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">doSyncPubSubTest</td>
+<td class="success">0.509s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2021-07-28T09:28:02,953-0500 [45783 13] com.newrelic INFO: Using default collector host: collector.newrelic.com
+2021-07-28T09:28:02,960-0500 [45783 13] com.newrelic INFO: Using default collector host: collector.newrelic.com
+2021-07-28T09:28:02,962-0500 [45783 13] com.newrelic INFO: Using default collector host: collector.newrelic.com
+2021-07-28T09:28:03,030-0500 [45783 13] com.newrelic INFO: Using default collector host: collector.newrelic.com
+2021-07-28T09:28:03,034-0500 [45783 13] com.newrelic INFO: Using default collector host: collector.newrelic.com
+2021-07-28T09:28:03,035-0500 [45783 13] com.newrelic INFO: Using default collector host: collector.newrelic.com
+2021-07-28 09:28:03,127 INFO  - Setting default authentication behavior to ALLOW ALL
+2021-07-28 09:28:03,132 INFO  - HiveMQ version: Development Snapshot
+2021-07-28 09:28:03,182 INFO  - Starting EmbeddedHiveMQ.
+2021-07-28 09:28:07,114 INFO  - Starting HiveMQ extension system.
+2021-07-28 09:28:07,148 INFO  - Starting TCP listener on address 0.0.0.0 and port 1883
+2021-07-28 09:28:07,193 INFO  - Started TCP Listener on address 0.0.0.0 and on port 1883
+2021-07-28 09:28:07,194 INFO  - Started EmbeddedHiveMQ in 4011ms
+Call to subscribe
+Call to publish(0)
+Sub Connected: MqttConnAck{reasonCode=SUCCESS, sessionPresent=false, restrictions=MqttConnAckRestrictions{receiveMaximum=10, maximumPacketSize=268435460, topicAliasMaximum=5, maximumQos=EXACTLY_ONCE, retainAvailable=true, wildcardSubscriptionAvailable=true, sharedSubscriptionAvailable=true, subscriptionIdentifiersAvailable=true}}
+Subscribe Ack: MqttSubAck{reasonCodes=[GRANTED_QOS_2], packetIdentifier=65526}
+2021-07-28T09:28:07,588-0500 [45783 368] com.newrelic INFO: Set outbound headers to: [(MessageCount, 0), (NewRelicID, UhkfH1BSVkZVHRgeUVZWVQ==)]
+2021-07-28T09:28:07,588-0500 [45783 368] com.newrelic INFO: Set outbound headers to: [(MessageCount, 0), (NewRelicID, UhkfH1BSVkZVHRgeUVZWVQ==), (NewRelicTransaction, OENXBFIDUQFdU1ICVVADVw0PFRlVUVURBE5HUgBWBwIGXFNVAlJUAlJUX0dOQ1JcBVZSXANQRzs=)]
+Message from topic newrelic/test-sync
+first message received: 0
+message user properties: [(MessageCount, 0), (NewRelicID, UhkfH1BSVkZVHRgeUVZWVQ==), (NewRelicTransaction, OENXBFIDUQFdU1ICVVADVw0PFRlVUVURBE5HUgBWBwIGXFNVAlJUAlJUX0dOQ1JcBVZSXANQRzs=)]
+Sub Finished: true
+Pub Finished: true
+Finished transaction count: 2
+	Metric Name: Java/com.hivemq.client.internal.mqtt.handler.publish.incoming.MqttGlobalIncomingPublishFlow/request
+	Metric Name: Java/com.nr.instrumentation.test.hivemq.TestMQTT5SyncClient/subscribe
+	Metric Name: Custom/com.nr.instrumentation.test.hivemq.TestMQTT5SyncClient/processIncoming
+	Metric Name: MessageBroker/HiveMQ/Topic/Consume/Named/newrelic_test-sync
+	Metric Name: Java/com.nr.instrumentation.test.hivemq.TestMQTT5SyncClient/publish
+	Metric Name: MessageBroker/HiveMQ/Topic/Produce/Named/newrelic_test-sync
+2021-07-28 09:28:07,704 INFO  - Stopping EmbeddedHiveMQ.
+2021-07-28 09:28:09,759 INFO  - Shutting down extension system
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.4.1</a> at Jul 28, 2021, 9:28:14 AM</p>
+</div>
+</div>
+</body>
+</html>
