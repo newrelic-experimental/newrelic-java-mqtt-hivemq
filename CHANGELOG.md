@@ -1,13 +1,12 @@
 ## Version: [v1.0.1](https://github.com/newrelic-experimental/newrelic-java-mqtt-hivemq/releases/tag/v1.0.1) | Created: 2023-09-27
 ### Bug Fixes
-- Ixes to the build
-- Erge pull request #1 from newrelic-experimental/build-fixes
-- Uild fixes
-- Erge pull request #2 from newrelic-experimental/build-fixes
+
+- Merge pull request #1 from newrelic-experimental/build-fixes
+- Merge pull request #2 from newrelic-experimental/build-fixes
 
 ### Build Upgrades
-- Pdate build.gradle
 - Updated vendor title and added release workflow
+
 
 
 ## Installation
