@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: com.newrelic.instrumentation.hivemq-mqtt-client-1.
- 2
-Implementation-Vendor: New Relic
-Implementation-Vendor-Id: com.newrelic
-Implementation-Version: 1.0
-

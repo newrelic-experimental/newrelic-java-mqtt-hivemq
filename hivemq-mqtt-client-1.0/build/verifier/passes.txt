@@ -1,4 +1,0 @@
-hivemq-mqtt-client-1.0 com.hivemq:hivemq-mqtt-client:1.0.1
-hivemq-mqtt-client-1.0 com.hivemq:hivemq-mqtt-client:1.0.0
-hivemq-mqtt-client-1.0 com.hivemq:hivemq-mqtt-client:1.0.1
-hivemq-mqtt-client-1.0 com.hivemq:hivemq-mqtt-client:1.0.0

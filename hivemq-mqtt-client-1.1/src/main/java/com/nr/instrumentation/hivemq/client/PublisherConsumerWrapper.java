@@ -1,5 +1,6 @@
 package com.nr.instrumentation.hivemq.client;
 
+import java.util.HashMap;
 import java.util.function.Consumer;
 
 import com.hivemq.client.mqtt.mqtt5.message.publish.Mqtt5Publish;
@@ -26,6 +27,9 @@ public class PublisherConsumerWrapper implements Consumer<Mqtt5Publish>  {
 	@Override
 	@Trace(dispatcher=true)
 	public void accept(Mqtt5Publish t) {
+		HashMap<String, Object> attributes = new HashMap<String, Object>();
+		Utils.addMQTTPublish5(attributes, t);
+		NewRelic.getAgent().getTracedMethod().addCustomAttributes(attributes);
 		NewRelic.getAgent().getTransaction().setTransactionName(TransactionNamePriority.FRAMEWORK_HIGH, false, "HiveMQ", "HiveMQ","Topic","Receive",t.getTopic().toString());
 		MessageConsumeParameters params = MessageConsumeParameters.library("HiveMQ").destinationType(DestinationType.NAMED_TOPIC).destinationName(t.getTopic().toString()).inboundHeaders(new InboundWrapper(t.getUserProperties())).build();
 		NewRelic.getAgent().getTracedMethod().reportAsExternal(params);
