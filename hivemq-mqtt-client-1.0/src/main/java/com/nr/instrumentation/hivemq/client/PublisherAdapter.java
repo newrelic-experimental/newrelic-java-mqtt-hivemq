@@ -1,5 +1,7 @@
 package com.nr.instrumentation.hivemq.client;
 
+import java.util.HashMap;
+
 import com.hivemq.client.mqtt.mqtt5.message.publish.Mqtt5Publish;
 import com.newrelic.agent.bridge.AgentBridge;
 import com.newrelic.api.agent.NewRelic;
@@ -26,6 +28,9 @@ public class PublisherAdapter implements Function<Mqtt5Publish, Mqtt5Publish> {
 	@Override
 	@Trace(async=true)
 	public  Mqtt5Publish  apply(Mqtt5Publish source) throws Exception {
+		HashMap<String, Object> attributes = new HashMap<String, Object>();
+		Utils.addMQTTPublish5(attributes, source);
+		NewRelic.getAgent().getTracedMethod().addCustomAttributes(attributes);
 		if(token != null) {
 			token.linkAndExpire();
 			token = null;

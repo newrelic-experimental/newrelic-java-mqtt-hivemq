@@ -1,5 +1,7 @@
 package com.hivemq.client.internal.mqtt.handler.publish.incoming;
 
+import java.util.HashMap;
+
 import org.reactivestreams.Subscriber;
 
 import com.hivemq.client.internal.mqtt.MqttClientConfig;
@@ -17,6 +19,7 @@ import com.newrelic.api.agent.weaver.NewField;
 import com.newrelic.api.agent.weaver.Weave;
 import com.newrelic.api.agent.weaver.Weaver;
 import com.nr.instrumentation.hivemq.client.InboundWrapper;
+import com.nr.instrumentation.hivemq.client.Utils;
 
 @Weave(type=MatchType.BaseClass)
 public abstract class MqttIncomingPublishFlow extends FlowWithEventLoop {
@@ -30,6 +33,9 @@ public abstract class MqttIncomingPublishFlow extends FlowWithEventLoop {
 
 	@Trace(async=true)
 	public void onNext(Mqtt5Publish result) {
+		HashMap<String, Object> attributes = new HashMap<String, Object>();
+		Utils.addMQTTPublish5(attributes, result);
+		NewRelic.getAgent().getTracedMethod().addCustomAttributes(attributes);
 		if(token !=null) {
 			token.link();
 		}

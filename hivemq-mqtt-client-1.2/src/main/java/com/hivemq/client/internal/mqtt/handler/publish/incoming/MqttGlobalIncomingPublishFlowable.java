@@ -16,7 +16,6 @@ import io.reactivex.Flowable;
 public abstract class MqttGlobalIncomingPublishFlowable extends Flowable<Mqtt5Publish> {
 	
 	protected void subscribeActual(Subscriber<? super Mqtt5Publish> subscriber) {
-		NewRelic.getAgent().getLogger().log(Level.FINE, "call to MqttGlobalIncomingPublishFlowable.subscribeActual({0})", subscriber.getClass().getName());
 		if(!(subscriber instanceof SubscriberWrapper)) {
 			SubscriberWrapper<Mqtt5Publish> wrapper = new SubscriberWrapper<Mqtt5Publish>(subscriber);
 			subscriber = wrapper;

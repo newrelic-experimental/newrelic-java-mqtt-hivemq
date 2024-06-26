@@ -1,5 +1,8 @@
 package com.nr.instrumentation.hivemq.client;
 
+import java.util.HashMap;
+import java.util.Optional;
+
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
 
@@ -38,10 +41,17 @@ public class SubscriberWrapper implements Subscriber<Mqtt5PublishResult> {
 	@Override
 	@Trace(async=true)
 	public void onNext(Mqtt5PublishResult t) {
+		HashMap<String, Object>  attributes = new HashMap<String, Object>();
 		if(token != null) {
 			token.link();
 		}
+		Optional<Throwable> error = t.getError();
+		if(error.isPresent()) {
+			NewRelic.noticeError(error.get());
+		}
 		Mqtt5Publish result = t.getPublish();
+		Utils.addMQTTPublish5(attributes, result);
+		NewRelic.getAgent().getTracedMethod().addCustomAttributes(attributes);
 		String topicName = result.getTopic().toString();
 		MessageProduceParameters params = MessageProduceParameters.library("HiveMQ").destinationType(DestinationType.NAMED_TOPIC).destinationName(topicName).outboundHeaders(null).build();
 		if(segment != null) {
