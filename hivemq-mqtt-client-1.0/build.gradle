@@ -5,16 +5,12 @@ apply plugin: 'java'
 
 dependencies {
    implementation 'com.hivemq:hivemq-mqtt-client:1.0.0'
-   
+
    // New Relic Labs Java Agent dependencies
-   implementation 'com.newrelic.agent.java:newrelic-agent:6.0.0'
-   implementation 'com.newrelic.agent.java:newrelic-api:6.0.0'
-   implementation fileTree(include: ['*.jar'], dir: '../libs')
-   
-   testImplementation 'junit:junit:4.12'
-   testImplementation fileTree(include: ['*.jar'], dir: '../test-lib')
-   testImplementation 'com.hivemq:hivemq-community-edition-embedded:2020.3'
-   
+   implementation 'com.newrelic.agent.java:newrelic-agent:' + project.findProperty('java.agent.version')
+   implementation 'com.newrelic.agent.java:newrelic-api:' + project.findProperty('java.agent.version')
+   implementation 'com.newrelic.agent.java:agent-bridge:' + project.findProperty('java.agent.version')
+   implementation fileTree(include: ['*.jar'], dir: '../test-lib')
 }
 
 jar {
@@ -27,5 +23,5 @@ jar {
 }
 
 verifyInstrumentation {
-	passes 'com.hivemq:hivemq-mqtt-client:[1.0.0,1.1.0)'
+  passesOnly 'com.hivemq:hivemq-mqtt-client:[1.0.0,1.1.0)'
 }

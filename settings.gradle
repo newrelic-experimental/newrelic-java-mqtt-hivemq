@@ -1,5 +1,4 @@
-rootProject.name = 'java-instrumentation-template'
+rootProject.name = 'mqtt-hivemq-instrumentation'
 include 'hivemq-mqtt-client-1.0'
 include 'hivemq-mqtt-client-1.1'
 include 'hivemq-mqtt-client-1.2'
-include 'hivemq-server-jmx'
